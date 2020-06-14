@@ -24,9 +24,33 @@ def selection_sort(arr):
 
 
 # TO-DO:  implement the Bubble Sort function below
+# def bubble_sort(arr):
+#     # Your code here
+#     # basically the same logic as above, but without needing to update variables like current and smallest index, and we check for larger numbers rather than smaller numbers
+#     for i in range(len(arr)):
+#         for j in range(len(arr) - 1):
+#             if arr[j] > arr[j + 1]:
+#                 arr[j], arr[j + 1] = arr[j + 1], arr[j]
+
+#     # I found a great explanation of the bubblesort and good optimization
+
+#     return arr
+
+# re-formatted to check for if any swaps have been made AND decreases the amount of elements searched by 1 (since the last element will be the largest)
 def bubble_sort(arr):
     # Your code here
+    # basically the same logic as above, but without needing to update variables like current and smallest index, and we check for larger numbers rather than smaller numbers
+    iterations = 0
+    swapped = True
+    # for i in range(len(arr)):
+    while(swapped):
+        swapped = False
+        for j in range(len(arr) - iterations - 1):
+            if arr[j] > arr[j + 1]:
+                arr[j], arr[j + 1] = arr[j + 1], arr[j]
+                swapped = True
 
+    # I found a great explanation of the bubblesort and good optimization
 
     return arr
 
