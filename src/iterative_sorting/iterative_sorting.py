@@ -8,9 +8,17 @@ def selection_sort(arr):
         # (hint, can do in 3 loc)
         # Your code here
 
+        # iterate through the rest of the elements after i
+        for j in range(cur_index + 1, len(arr)):
+            # if j is smaller than smallest index
+            if arr[j] < arr[smallest_index]:
+                # set the current index to be j
+                smallest_index = j
 
         # TO-DO: swap
         # Your code here
+        # question: why do these need to be comma separated? 
+        arr[smallest_index], arr[cur_index] = arr[cur_index], arr[smallest_index]
 
     return arr
 
