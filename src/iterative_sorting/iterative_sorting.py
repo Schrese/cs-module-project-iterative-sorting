@@ -43,15 +43,17 @@ def bubble_sort(arr):
     iterations = 0
     swapped = True
     # for i in range(len(arr)):
-    while(swapped):
+    while swapped:
         swapped = False
-        for j in range(len(arr) - iterations - 1):
+        iterations += 1
+        for j in range(len(arr) - iterations):
+ 
             if arr[j] > arr[j + 1]:
                 arr[j], arr[j + 1] = arr[j + 1], arr[j]
                 swapped = True
 
     # I found a great explanation of the bubblesort and good optimization
-
+    # print(iterations)
     return arr
 
 '''
